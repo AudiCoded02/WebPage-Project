@@ -1,0 +1,171 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+/*For the header*/
+header{
+    background-color:rgb(3, 50, 60);
+    background-size: cover;
+    text-align: center;
+    line-height: 3.5;
+}
+/*Aligning the images on the corners*/
+ .imgcorner1{
+
+    height: 70px; 
+    width: 70px; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    z-index: 1000;  
+}
+ .imgcorner2{
+
+    height: 70px; 
+    width: 70px; 
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    z-index: 1000;  
+}
+.imgcorner3{
+
+    height: 70px; 
+    width: 70px; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    z-index: 1000; 
+}
+.imgcorner4{
+    
+    height: 70px; 
+    width: 70px; 
+    position: absolute; 
+    bottom: 0; 
+    right: 0;
+    z-index: 1000;
+}
+/*For the nav links*/
+nav{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;text-align: center;
+}
+
+nav ul{/*To stylize the list for the nav links*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size:15px
+}
+nav ul li{/*Stylize the main Nav points in the list*/
+    
+    padding:2px;
+    display: inline;
+    margin-right: 20px;
+    
+}
+nav ul li a{text-decoration: none;color:white;position: relative;}/*for the default look before hovering*/
+nav ul li a:hover{text-decoration: underline;text-decoration-color: navajowhite;}/*For the look after hovering*/
+
+/*the link will have a different colour indicating current page*/
+.mainheader nav ul li a.current {color: goldenrod }
+/*i actually dont remember why i did this but i think its for the text of the footer ONLY*/
+.site-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    
+}
+/*For the footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    min-height: 80px;
+    position: relative;
+    
+    bottom: 0;
+    box-sizing: border-box;
+}
+/*For the article section of main home*/
+.mainhome article{/*Format the article itself, and with a line height of 1 to make everything compact and nice with a border around each section in the article*/
+    border: 1px solid #ddd;
+    text-align:center;
+    align-items:center;
+    line-height:1;
+    padding:60px;
+    margin:0px;
+}
+/*For the table*/
+.table-text{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+/*Format rows, heading and data of table*/
+.table-text table,tr,th,td{
+    border: 1px solid black;padding: 20px;
+    table-layout: fixed;
+    word-wrap: break-word; /* This will ensure the content breaks to fit the cell */
+}
+/*just colour indicator for checkmark and x in the table*/
+.checkmark{color: green;}.xcell{color: red;}
+/*For the Grid*/
+.grid {
+    border:1px #000;
+    display: flex;                       
+    flex-wrap: wrap;                     
+    justify-content: space-around;
+}
+/*For each cell*/
+.cell {
+    
+    flex: 0 0 32%;                       
+    border:1px solid black;
+    margin-bottom: 5px;
+    background-color: #999;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type = "text"],input[type = "email"]{/*For each input in name and email, show a border to highlight you are writing in this area*/
+    width: 100%; padding: 0px; margin-bottom: 4px; box-sizing: border-box;text-align:center;font-size:15px;border:0.5px steelblue;font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+}
+textarea{/*Same thing but for text area (but we dont want the text to be aligned*/
+    width: 100%; padding: 0px; margin-bottom: 4px; box-sizing: border-box;font-size: 15px;border:0.5px steelblue;font-family: Arial, Helvetica, sans-serif;
+}/*for the form stylize in general*/
+.formContact{
+    color:whitesmoke;
+    font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto;border:2px solid darkgoldenrod;padding:20px;background-color: rgb(28, 29, 48);
+    max-height: 1000px;
+}
+/*For the button to submit*/
+button{
+    background-color: green; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;
+}/*Darkens the button colour essentially to know you are going to submit*/
+button:hover{background-color: rgb(0, 53, 0);}
+.formContact label{display: block; margin-bottom: 8px;}/*For the label*/
+
+/* Responsive design using media queries for different devices*/
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    p {
+        margin: 10px;
+    }
+}

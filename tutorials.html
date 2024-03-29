@@ -1,0 +1,132 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- XML/XHTML boilerplate code -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Computer Science Hub</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "projectFunctions.js"></script> 
+</head>
+
+<body>
+    <header class = "mainheader">
+        <img src =  "csback.png" alt = "Image of CSS logo" class = "imgcorner1">
+        
+        <nav>
+            <ul>
+                <li><a href = "homepage.html">Home</a></li>
+                <li><a href = "courses.html">Courses</a></li>
+                <li><a href = "contact.php">Contacts</a></li>
+                <li><a href = "resource.php">Resources</a></li>
+                <li><a href = "tutorials.html" class = "current">Tutorials</a></li>
+            </ul>
+        </nav>
+        <img src =  "csback.png" alt = "Image of CSS logo" class = "imgcorner2">
+    </header><!--for the title header-->
+    <section style = " line-height:1;text-align:center">
+        <h1>Tutorials and Resources</h1>
+    </section>
+    <section>
+        <!--the search bar functionality-->
+        <section style = "position: relative;">
+            <input type = "text" id ="searchBar" oninput = "searchTutorials()"placeholder="Search Tutorial" style = "width:100%;padding:10px;border:1px solid #333">
+            <!--adds the x to clear search (sometimes a bit buggy keep in mind)-->
+            <span onclick="clearSearch()" style="cursor:pointer; position:absolute; right:20px; top:10px;">&#x2715;</span>
+        </section>
+        <!--List all tutorials for courses-->
+        <!--This style is same throughout-->
+        <ul id = "tutorials" style = "text-decoration: none;list-style-type:none;padding:0;margin:0;">
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Intro to Programming and Algorithms</h3>
+                <p>Links to Get you started on Computer Science Basics</p>
+                <section style = "display:flex">
+                    <!--Links-->
+                <a style = "color:navy" href = "https://www.w3schools.com/c/index.php">Get Started with C</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=zOjov-2OZ0E&t=8s">Video: Begin Programming</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px;">
+                <h3>Programming for Beginners</h3>
+                <p>Links to Help with basic Python</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.w3schools.com/python/default.asp">Get Started with Python</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=kqtD5dpn9C8">Video: Python Programming</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Object Oriented Programming Using Java</h3>
+                <p>Java Tutorials</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.w3schools.com/java/default.asp">Get Started with Java</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=eIrMbAQSU34">Video: Java Programming</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Data Structures and Algorithms</h3>
+                <p>Understand Data Structures and Some Algorithms</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.geeksforgeeks.org/introduction-to-data-structures/">Understand the Data Structures</a>
+                <a style = "color:navy;padding-left:30px" href = "https://www.bigocheatsheet.com/">Useful Site for Time Complexities</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=8hly31xKli0">Video: Python Programming</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Advanced Web Design</h3>
+                <p>Create a Website</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.youtube.com/watch?v=G3e-cpL7ofc">Video: Understand HTML and CSS</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.w3schools.com/js/">For Advanced Websites, Learn Some Javascript</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=PlxWf493en4">Video: Simple Website Design Startup</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Database Management Systems</h3>
+                <p>Create and Manage a Database</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.w3schools.com/sql/default.asp">Get Started with SQL</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.geeksforgeeks.org/introduction-of-er-model/">ER Diagram Introduction</a>
+                <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=mqprM5YUdpk">Video: What is Database Management Systems?</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Operating Systems Fundamental</h3>
+                <p>Know Xv6 and </p>
+                <section style = "display:flex">
+                <a style = "color:navy;" href = "https://www.youtube.com/watch?v=dOiA2nNJpc0">Video: Understanding Main Concepts of Operating Systems</a>
+                </section>
+            </li>
+            
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Artificial Intelligence Concepts</h3>
+                <p>Understand AI and Machine Learning Algorithms</p>
+                <section style = "display:flex">
+                <a style = "color:navy" href = "https://www.youtube.com/watch?v=i_LwzRVP7bg">Video: Understand Machine Learning Algorithms</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Computer Networks</h3>
+                <p>Understand and Explore Computer Networks </p>
+                <section style = "display:flex">
+                <a style = "color:navy;" href = "https://www.youtube.com/watch?v=qiQR5rTSshw&t=12s">Video: Know Computer Networks</a>
+                </section>
+            </li>
+            <li class = "tutorialsItem" style = "border:2px solid black;padding:10px">
+                <h3>Mobile Application Development</h3>
+                <p>Learn to Develop your Own Mobile Application</p>
+                <section style = "display:flex">
+                    <a style = "color:navy;" href = "https://www.youtube.com/watch?v=F9UC9DY-vIU">Video: Program in Kotlin </a>
+                    <a style = "color:navy; padding-left:30px" href = "https://www.youtube.com/watch?v=BBWyXo-3JGQ">Video: Build Android Application using Kotlin </a>
+                </section>
+            </li>
+        </ul>
+    </section>
+
+    <footer class = "site-footer">
+        <h3>&copy;2024 Computer Science Hub</h3>
+        <img src =  "csback.png" alt = "Image of CSS logo" class = "imgcorner3">
+        <img src =  "csback.png" alt = "Image of CSS logo" class = "imgcorner4">
+        </footer>
+    
+</body>
