@@ -46,6 +46,12 @@
         </form>
        <h2>Shoot Me an email</h2>
        <h3>Please Enter Valid Characters</h3>
+            <?php
+        if (isset($_GET['form_sent']) && $_GET['form_sent'] == 'true') {
+            echo '<p>Thank you! Your form has been sent.</p>';
+        }
+        ?>
+
     </section>
 
     <footer class = "site-footer">

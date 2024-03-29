@@ -24,9 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->isHTML(true);
     $mail->Subject = 'New message from ' . $name;//subject lines
     $mail->Body = $message;//message
-    $mail->send();
-    echo 'sent successfully';
-    header("Location: contact.php");//redirect
+    // After sending the email
+    if ($mail->send()) {
+        echo 'sent successfully';
+        header("Location: contact.php?form_sent=true");
+        exit();
+    } else {
+        echo 'Error: Form did not sent.....Discarded';
+    }
+
 
 
 }
